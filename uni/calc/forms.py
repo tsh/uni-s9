@@ -26,7 +26,22 @@ class CalcForm(forms.Form):
     arg2 = forms.IntegerField()
 
     def calculate(self):
-        return 42
+        op = self.cleaned_data.get('operator')
+        arg1 = self.cleaned_data.get('arg1')
+        arg2 = self.cleaned_data.get('arg2')
+        if op == '+':
+            return arg1 + arg2
+        if op == '-':
+            return arg1 - arg2
+        if op == '*':
+            return arg1 * arg2
+        if op == '/':
+            try:
+                return arg1 / arg2
+            except ZeroDivisionError:
+                return float('Inf')
+
+
 
 
 
