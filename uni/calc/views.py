@@ -3,11 +3,19 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 
-from .forms import RegistrationForm
+from .forms import RegistrationForm, CalcForm
 
 
 def index(request):
-    return render_to_response('calc/index.html')
+    if request.method == 'POST':
+        form = CalcForm(request.POST)
+        if form.is_valid():
+            return render( request, 'calc/index.html', {'form': form,
+                                                          'result': form.calculate()})
+        return render( request, 'calc/index.html', {'form': form,} )
+    else:
+        form = CalcForm()
+        return render( request, 'calc/index.html', {'form': form,} )
 
 
 def register(request):

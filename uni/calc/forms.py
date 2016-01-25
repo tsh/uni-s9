@@ -14,3 +14,19 @@ class RegistrationForm(forms.Form):
             if password2 == password1:
                 return password2
         raise forms.ValidationError('Passwords do not match.')
+
+
+def validate_operator(value):
+    if value not in ['+', '-', '/', '*']:
+        raise forms.ValidationError("%s is not a valid operator. Use on of the following: '+', '-', '/', '*' " % value)
+
+class CalcForm(forms.Form):
+    arg1 = forms.IntegerField()
+    operator = forms.CharField(validators=[validate_operator])
+    arg2 = forms.IntegerField()
+
+    def calculate(self):
+        return 42
+
+
+
