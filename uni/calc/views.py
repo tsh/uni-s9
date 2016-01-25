@@ -2,10 +2,12 @@ from django.shortcuts import render, render_to_response
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 
 from .forms import RegistrationForm, CalcForm
 
 
+@login_required
 def index(request):
     if request.method == 'POST':
         form = CalcForm(request.POST)
