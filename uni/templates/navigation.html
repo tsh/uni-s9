@@ -1,5 +1,8 @@
-<li class="dropdown">
-    <ul class="dropdown-menu pull-right">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <a class="navbar-brand" href="/">Calc</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <!--           <li><a href="index.html">Home</a></li>          -->
         {% if user.is_authenticated %}
         <li><a href="#">Welcome, {{ user.username }}</a></li>
         <li class="divider"></li>
@@ -10,4 +13,4 @@
         <li><a href="{% url 'registration' %}">Sign Up</a></li>
         {% endif %}
     </ul>
-</li>
+</nav>
