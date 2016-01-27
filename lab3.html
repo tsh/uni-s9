@@ -10,11 +10,11 @@
 <table>
     <tr>
         <td>кількість працівників, що беруть участь у розробці проекту</td>
-        <td><input type="number" id="1" value="0" autocomplete="off"> </td>
+        <td><input type="number" id="1" value="1" autocomplete="off"> </td>
     </tr>
     <tr>
         <td>витрати на основну заробітну плату працівника i-ї категорії, грн </td>
-        <td><input type="number" id="2" value="0" autocomplete="off"> </td>
+        <td><input type="number" id="2" value="1" autocomplete="off"> </td>
     </tr>
     <tr>
         <td>коефіцієнт, що враховує додаткову заробітну плату в частках до основної заробітної плати </td>
@@ -30,11 +30,11 @@
     </tr>
     <tr>
         <td>витрати на матеріали</td>
-        <td><input type="number" id="6" value="0" autocomplete="off"> </td>
+        <td><input type="number" id="6" value="1" autocomplete="off"> </td>
     </tr>
     <tr>
         <td>витрати на використання машинного часу.</td>
-        <td><input type="number" id="7" value="0" autocomplete="off"> </td>
+        <td><input type="number" id="7" value="2" autocomplete="off"> </td>
     </tr>
     <tr>
         <td></td>
@@ -42,7 +42,7 @@
     </tr>
     <tr>
         <td></td>
-        <td><p id="calcResult"></p></td>
+        <td><p id="calcResult">19.8304</p></td>
     </tr>
 </table>
 
@@ -54,5 +54,24 @@
     <tr> <td>Разом</td><td></td> <td></td> <td id="table-result">55523.39</td></tr>
     <tr> <td></td><td></td> <td></td> <td ><button id="table-calc">Рахувати!</button></td></tr>
 </table>
+
+<h4>витрати на використання машинного часу</h4>
+<table>
+    <tr>
+        <td>машинний час комп'ютера, необхідний для розробки програмного продукту</td>
+        <td><input type="number" id="3t1_1" value="460" autocomplete="off"> </td>
+    </tr>
+    <tr>
+        <td>вартість 1 години машинного часу  </td>
+        <td><input type="number" id="3t2_1" value="20" autocomplete="off"> </td>
+    </tr>
+    <tr>
+        <td>коефіцієнт мультипрограмності </td>
+        <td><input type="number" id="3t3_1" value="1" autocomplete="off"> </td>
+    </tr>
+    <tr> <td></td><td id="3t_4_res">9200</td></tr>
+    <tr> <td></td><td ><button id="3t_5_btn">Рахувати!</button></td></tr>
+</table>
+
 </body>
 </html>

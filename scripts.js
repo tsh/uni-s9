@@ -31,5 +31,13 @@ $( document ).ready(function() {
         $("#table-result1").text(resultRow1);
         $("#table-result2").text(resultRow2);
         $("#table-result").text(resultRow1+resultRow2);
+    });
+
+    $("#3t_5_btn").click(function(e){
+        var r1 = parseFloat($("#3t1_1").val()),
+            r2 = parseFloat($("#3t2_1").val()),
+            r3 = parseFloat($("#3t3_1").val());
+
+        $("#3t_4_res").text(r1*r2*r3);
     })
 });
