@@ -19,6 +19,7 @@ $( document ).ready(function() {
         $("#calcResult").text(result1*result2);
     });
 
+
     $("#table-calc").click(function(e){
         var rv1_1 = parseFloat($("#t1_1").val()),
             rv1_2 = parseFloat($("#t1_2").val()),
@@ -33,11 +34,26 @@ $( document ).ready(function() {
         $("#table-result").text(resultRow1+resultRow2);
     });
 
+
     $("#3t_5_btn").click(function(e){
         var r1 = parseFloat($("#3t1_1").val()),
             r2 = parseFloat($("#3t2_1").val()),
             r3 = parseFloat($("#3t3_1").val());
 
         $("#3t_4_res").text(r1*r2*r3);
+    });
+
+
+    $("#4t_5_btn").click(function(e){
+        $("#4t1_3").val(parseFloat($("#4t1_1").val()) * parseFloat($("#4t1_2").val())),
+        $("#4t2_3").val(parseFloat($("#4t2_1").val()) * parseFloat($("#4t2_2").val())),
+        $("#4t3_3").val(parseFloat($("#4t3_1").val()) * parseFloat($("#4t3_2").val())),
+        $("#4t4_3").val(parseFloat($("#4t4_1").val()) * parseFloat($("#4t4_2").val())),
+        $("#4t_result").text(
+            parseFloat($("#4t1_3").val()) +
+            parseFloat($("#4t2_3").val()) +
+            parseFloat($("#4t3_3").val()) +
+            parseFloat($("#4t4_3").val())
+        );
     })
 });
