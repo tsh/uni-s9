@@ -7,6 +7,7 @@
     <title>Розрахунок витрат на розробку проекту</title>
 </head>
 <body>
+<h2>Капітальні вкладення на реалізацію проекту: <span id="capPrjTotal">107697.22</span> грн <button id="capPrjTotal_btn">Рахувати!</button></h2>
 <h2>Kапітальні вкладення на проектування:  <span id="cap">75943.22</span> грн <button id="cap_btn">Рахувати!</button> </h2>
 <table>
     <tr>
@@ -127,5 +128,36 @@
     </tr>
 </table>
 
+<h2>Капітальні вкладення на реалізацію проекту: <span id="cap-real">31754</span></h2>
+<table>
+    <tr>
+        <td>витрати на основне і допоміжне обладнання, грн</td>
+        <td><input type="number" id="Ko" value="22500" autocomplete="off"></td>
+    </tr>
+    <tr>
+        <td>витрати на будівництво, реконструкцію будівель та приміщень, грн</td>
+        <td><input type="number" id="Kzd" value="1" autocomplete="off"></td>
+    </tr>
+    <tr>
+        <td>витрати на придбання типових розробок, пакетів, грн</td>
+        <td><input type="number" id="Kpr" value="6" autocomplete="off"></td>
+    </tr>
+    <tr>
+        <td>витрати на прокладку ліній зв'язку, грн</td>
+        <td><input type="number" id="Klz" value="247" autocomplete="off"></td>
+    </tr>
+    <tr>
+        <td>витрати на підготовку і перепідготовку кадрів, грн</td>
+        <td><input type="number" id="Kpk" value="9000" autocomplete="off"></td>
+    </tr>
+    <tr>
+        <td>Разом: </td>
+        <td id="RealizProjResult">31754</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button id="RealizProjResult_btn">Рахувати!</button></td>
+    </tr>
+</table>
 </body>
 </html>

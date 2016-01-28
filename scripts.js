@@ -65,5 +65,22 @@ $( document ).ready(function() {
             machineHours = parseFloat($("#3t_4_res").text()),
             workersPayment = parseFloat($("#table-result").text());
         $("#cap").text((materials + calcResult + machineHours + workersPayment) + 10000);
+    });
+
+
+    $("#RealizProjResult_btn").click(function(e){
+        var Ko = parseFloat($("#Ko").val()),
+            Kzd = parseFloat($("#Kzd").val()),
+            Kpr = parseFloat($("#Kpr").val()),
+            Klz = parseFloat($("#Klz").val()),
+            Kpk = parseFloat($("#Kpk").val()),
+            result = Ko + Kzd + Kpr + Klz + Kpk;
+        $("#RealizProjResult").text(result);
+        $("#cap-real").text(result);
+    });
+
+
+    $("#capPrjTotal_btn").click(function(e){
+        $("#capPrjTotal").text(parseFloat($("#cap").text()) + parseFloat($("#cap-real").text()))
     })
 });
