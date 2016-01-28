@@ -55,5 +55,15 @@ $( document ).ready(function() {
             parseFloat($("#4t3_3").val()) +
             parseFloat($("#4t4_3").val())
         );
+    });
+
+
+    $("#cap_btn").click(function (e) {
+        var result = 0,
+            materials = parseFloat($("#4t_result").text()),
+            calcResult = parseFloat($("#calcResult").text()),
+            machineHours = parseFloat($("#3t_4_res").text()),
+            workersPayment = parseFloat($("#table-result").text());
+        $("#cap").text((materials + calcResult + machineHours + workersPayment) + 10000);
     })
 });
